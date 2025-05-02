@@ -1,4 +1,4 @@
-package 'State Actions' {
+package 'VehiclePowerManagement' {
 	attribute def VehicleStartSignal;
 	attribute def VehicleOnSignal;
 	attribute def VehicleOffSignal;

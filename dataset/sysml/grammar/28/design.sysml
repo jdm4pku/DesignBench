@@ -1,4 +1,4 @@
-package 'Control Structures Example' {
+package 'LoopBasedCharging' {
 	private import ScalarValues::*;
 	attribute def BatteryCharged;
 	part battery;

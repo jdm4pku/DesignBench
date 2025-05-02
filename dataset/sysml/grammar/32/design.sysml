@@ -1,4 +1,4 @@
-package 'Messaging Example' {
+package 'CameraMessagingSystem' {
 	item def Scene;
 	item def Image;
 	item def Picture;

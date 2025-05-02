@@ -1,4 +1,4 @@
-package 'For Loop Example' {
+package 'KinematicMotionSimulation' {
 	private import SequenceFunctions::*;
     action def StraightLineDynamics {
         in power : ISQ::PowerValue;

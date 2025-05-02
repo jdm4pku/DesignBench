@@ -1,4 +1,4 @@
-package 'Constraint Assertions-2' {
+package 'VehicleMassBudgetingConstraints' {
 	private import ISQ::*;
 	private import SI::*;
 	private import NumericalFunctions::*;

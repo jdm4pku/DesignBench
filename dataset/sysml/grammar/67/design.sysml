@@ -1,4 +1,4 @@
-package 'Time Constraints' {
+package 'VehicleMaintenanceTimingConstraints' {
 	private import ISQ::TemperatureValue;
 	private import ISQ::DurationValue;
 	private import Time::TimeInstantValue;

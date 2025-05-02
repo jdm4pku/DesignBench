@@ -1,4 +1,4 @@
-package 'Opaque Action Example' {
+package 'OpaqueSensorManager' {
 	part def Sensor {
 		attribute ready : ScalarValues::Boolean;
 	}

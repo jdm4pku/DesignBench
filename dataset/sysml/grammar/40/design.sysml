@@ -1,4 +1,4 @@
-package 'Change and Time Triggers' {
+package 'VehicleHealthMonitoring' {
 	private import ISQ::TemperatureValue;
 	private import ISQ::DurationValue;
 	private import Time::TimeInstantValue;

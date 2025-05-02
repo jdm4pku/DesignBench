@@ -1,4 +1,4 @@
-package 'Constraints Example-1' {
+package 'VehicleMassComplianceSystem' {
 	private import ISQ::*;
 	private import SI::*;
 	private import NumericalFunctions::*;

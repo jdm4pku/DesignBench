@@ -1,4 +1,4 @@
-package 'Local Clock Example' {
+package 'TimedClockBehavior' {
 	private import ScalarValues::String;
 	item def Start;
 	item def Request;

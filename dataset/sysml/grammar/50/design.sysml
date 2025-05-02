@@ -1,4 +1,4 @@
-package 'Time Slice and Snapshot Example' {
+package 'VehicleLifecycleTemporalModel' {
 	attribute def Date;
 	item def Person;
 	part def Vehicle {

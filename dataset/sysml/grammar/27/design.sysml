@@ -1,4 +1,4 @@
-package 'Decision Example' {
+package 'BatteryChargingControl' {
 	private import ScalarValues::*;
 	attribute def BatteryCharged;
 	part battery;

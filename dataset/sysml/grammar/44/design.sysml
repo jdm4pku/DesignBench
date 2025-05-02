@@ -1,4 +1,4 @@
-package 'Event Occurrence Example' {	
+package 'CruiseControlEventFlow' {	
 	part def Driver;
 	part def CruiseController;
 	part def Speedometer;

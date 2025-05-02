@@ -1,4 +1,4 @@
-package 'State Decomposition-1' {
+package 'VehiclePowerManagement' {
 	attribute def VehicleStartSignal;
 	attribute def VehicleOnSignal;
 	attribute def VehicleOffSignal;

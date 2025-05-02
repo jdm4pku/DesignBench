@@ -1,24 +1,32 @@
-package 'Local Clock Example' {
-	private import ScalarValues::String;
-	item def Start;
-	item def Request;
-	part def Server {
-		part :>> localClock = Time::Clock();
-		attribute today : String;
-		port requestPort;
-		state ServerBehavior {
-			entry; then off;
-			state off;
-			accept Start via requestPort
-				then waiting;
-			state waiting;
-			accept request : Request via requestPort
-				then responding;
-			accept at Time::Iso8601DateTime(today + "11:59:00")
-				then off;
-			state responding;
-			accept after 5 [SI::min]
-				then waiting;
+package 'VehicleControlSignals' {
+	attribute def VehicleStartSignal;
+	attribute def VehicleOnSignal;
+	attribute def VehicleOffSignal;
+	attribute def ControllerStartSignal;
+	part def Vehicle {
+		brakePedalDepressed : ScalarValues::Boolean;
+	}
+	part def VehicleController;
+	action performSelfTest { in vehicle : Vehicle; }
+	state def VehicleStates;
+	state vehicleStates : VehicleStates {
+		in operatingVehicle : Vehicle;
+		in controller : VehicleController;
+		entry; then off;
+		state off;
+		accept VehicleStartSignal 
+			then starting;
+		state starting;
+		accept VehicleOnSignal
+			if operatingVehicle.brakePedalDepressed
+			do send ControllerStartSignal() to controller
+			then on;
+		state on {
+			entry performSelfTest{ in vehicle = operatingVehicle; }
+			do action providePower { /* ... */ }
+			exit action applyParkingBrake { /* ... */ }
 		}
+		accept VehicleOffSignal
+			then off;
 	}
 }

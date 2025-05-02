@@ -1,4 +1,4 @@
-package 'State Definition Example-1' {
+package 'VehicleStateManagement' {
 	attribute def VehicleStartSignal;
 	attribute def VehicleOnSignal;
 	attribute def VehicleOffSignal;

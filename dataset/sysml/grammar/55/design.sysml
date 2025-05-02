@@ -1,6 +1,20 @@
-package 'Car Mass Rollup 1' {
+package 'VehicleMassAggregation' {
 	private import ScalarValues::*;
-	private import MassRollup2::*;
+	private import NumericalFunctions::*;
+	part def MassedThing {
+		attribute simpleMass :> ISQ::mass; 
+		attribute totalMass :> ISQ::mass default simpleMass;
+	}
+	part compositeThing : MassedThing {
+		part subcomponents: MassedThing[*];		
+		attribute :>> totalMass default
+			simpleMass + sum(subcomponents.totalMass); 
+	}
+	part filteredMassThing :> compositeThing {
+		attribute minMass :> ISQ::mass;		
+		attribute :>> totalMass =
+			simpleMass + sum(subcomponents.totalMass.?{in p:>ISQ::mass; p >= minMass});
+	}
 	part def CarPart :> MassedThing {			
 		attribute serialNumber: String;
 	}

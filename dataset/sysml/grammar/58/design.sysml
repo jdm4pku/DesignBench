@@ -1,4 +1,4 @@
-package 'Calculation Definitions' {
+package 'VehicleDynamicsCoreCalculations' {
 	private import ScalarValues::Real;
 	private import ISQ::*;
 	calc def Power { in whlpwr : PowerValue; in Cd : Real; in Cf : Real; in tm : MassValue; in v : SpeedValue;

@@ -1,4 +1,4 @@
-package 'Fork Join Example' {
+package 'VehicleBrakeControl' {
 	private import ScalarValues::*;
 	attribute def TurnKeyToOn;
 	attribute def BrakePressure;
