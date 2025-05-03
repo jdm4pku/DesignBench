@@ -1,0 +1,10 @@
+The system requires the functional and safety aspects to be decomposed and modularly managed within the automotive system architecture design. The overall system must be composed of several subsystems and components, with each component assuming specific functional and/or safety responsibilities. The decomposition should be clearly defined top-down, starting from a designated root component. Each part of the system must have clearly defined interfaces, ensuring both independent comprehensibility and overall integration.
+
+Safety-related components within the system must be structurally marked with their safety attributes. Among these, certain safety components are mandatory—such as seat belts and bumpers, which must be explicitly equipped—while others are optional, for example, driver airbags and anti-lock braking systems (ABS).
+
+The system must also be able to distinctly display: 
+- the hierarchical structure of all components, 
+- all safety-related components along with their mandatory or optional status, and 
+- a complete list of all non-safety components.
+
+These views should be supported in both tree and tabular formats, so as to facilitate understanding, review, and traceability of the system structure and safety features by various stakeholders (such as system engineers and independent verification & validation personnel).
