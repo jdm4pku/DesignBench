@@ -1,54 +1,34 @@
-package 'AerospaceTrajectorySampling' {
-	private import SampledFunctions::SampledFunction;
-	private import SampledFunctions::SamplePair;
-	private import Collections::Array;
-	private import ISQ::*;
-	private import SI::*;
-	private import MeasurementReferences::*;
-	private import Time::*;
-	attribute def MissionElapsedTimeScale :> TimeScale {
-		:>> unit = s;
-		attribute :>> definitionalEpoch {
-			:>> num = 0;
-			:>> definition = "time instant zero at launch";
+package 'PubSubInteractionModel' {
+	private import ScalarValues::*;
+	private import PayloadDefinitions::*;
+	package PayloadDefinitions {
+	    item def Subscribe {
+	    	attribute topic : String;
+	    	ref part subscriber;
+	    }
+		item def Publish {
+			attribute topic : String;
+			ref publication;
 		}
-		attribute definitionalEpochInUTC : Iso8601DateTime;
-		attribute :>> transformation : CoordinateFramePlacement {
-			:>> source = UTC;
-			:>> origin = definitionalEpochInUTC;
-			:>> basisDirections = 1 [UTC];
+		item def Deliver {
+			ref publication;
 		}
-  }
-
-	attribute mets: MissionElapsedTimeScale { 
-		:>> definitionalEpochInUTC { :>> val = "2020-08-23T22:42:32.924534Z";}		
 	}
-	attribute def MissionElapsedTimeValue :> TimeInstantValue {
-	 	:>> mRef = mets; 
-	}
-
-	attribute spatialCF: CartesianSpatial3dCoordinateFrame[1] {
-	   :>> mRefs = (m, m, m);
-	}
-	attribute velocityCF: CartesianVelocity3dCoordinateFrame[1] = spatialCF/s;
-	attribute def PositionAndVelocity {
-		attribute position : CartesianPosition3dVector[1];
-		attribute velocity : CartesianVelocity3dVector[1];
-	}
-	attribute def AscentProfile :> SampledFunction {
-		attribute def AscentSample :> SamplePair {
-			attribute :>> domainValue: MissionElapsedTimeValue[1];
-			attribute :>> rangeValue: PositionAndVelocity[1];
+	occurrence def PubSubSequence {
+		part producer[1] {
+			event occurrence publish_source_event;
 		}
-		attribute :>> samples: AscentSample[*] ordered;
-	}
-	attribute ascentProfile1: AscentProfile {
-		attribute sample1: AscentSample { :>> domainValue = 0.0 [mets]; :>> rangeValue = pv1;
-			attribute pv1: PositionAndVelocity {:>> position = (0, 0, 0) [spatialCF]; :>> velocity = (0, 0, 0) [velocityCF]; } }
-		attribute sample2: AscentSample { :>> domainValue = 2.5 [mets]; :>> rangeValue = pv1;
-			attribute pv1: PositionAndVelocity {:>> position = (0.01, 0.03, 8.6) [spatialCF]; :>> velocity = (0, 0, 5.5) [velocityCF]; } }
-		attribute sample3: AscentSample { :>> domainValue = 5.1 [mets]; :>> rangeValue = pv1;
-			attribute pv1: PositionAndVelocity {:>> position = (0.04, 0.12, 18.6) [spatialCF]; :>> velocity = (0.05, 0.03, 25.3) [velocityCF]; } }
-		attribute :>> samples = (sample1, sample2, sample3);
+		message publish_message of Publish[1] from producer.publish_source_event to server.publish_target_event;
+		part server[1] {
+			event occurrence subscribe_target_event;
+			then event occurrence publish_target_event;
+			then event occurrence deliver_source_event;
+		}
+		message subscribe_message of Subscribe[1] from consumer.subscribe_source_event to server.subscribe_target_event;
+		message deliver_message of Deliver[1] from server.deliver_source_event to consumer.deliver_target_event;
+		part consumer[1] {
+			event occurrence subscribe_source_event;
+			then event occurrence deliver_target_event;
+		}
 	}
 }

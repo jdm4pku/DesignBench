@@ -1,56 +1,45 @@
-private import Views::*; 
-package 'VehicleSafetyandSecurityFeatureManagement' {
-	private import ScalarValues::*;
-	package AnnotationDefinitions {	
-		metadata def Safety {
-			attribute isMandatory : Boolean;
-		}
-		metadata def Security;
-	}
-	package PartsTree {
-		public import AnnotationDefinitions::*;
-		part vehicle {
-			part interior {
-				part alarm {@Security;}
-				part seatBelt[2] {@Safety{isMandatory = true;}}
-				part frontSeat[2];
-				part driverAirBag {@Safety{isMandatory = false;}}
-			}
-			part bodyAssy {
-				part body;
-				part bumper {@Safety{isMandatory = true;}}
-				part keylessEntry {@Security;}
-			}
-			part wheelAssy {
-				part wheel[2];
-				part antilockBrakes[2] {@Safety{isMandatory = false;}}
+package 'PowertrainFunctionComponentAllocation' {
+	private import SI::*;
+	private import RequirementModel::*;
+	private import LogicalModel::*;
+	private import PhysicalModel::*;
+	package RequirementModel {
+		requirement torqueGeneration {
+			subject generator: TorqueGenerator;
+			require constraint { 
+				 generator.generateTorque.torque > 0.0 [N*m]
 			}
 		}
 	}
-	package ViewDefinitions {	
-		public import AnnotationDefinitions::*;
-		view def SafetyFeatureView {
-			/* Parts that contribute to safety. */		
-			filter @Safety;
-			render asTreeDiagram;
-		}
-		view def SafetyOrSecurityFeatureView {
-			/* Parts that contribute to safety OR security. */		 
-			filter @Safety | @Security;
+	package LogicalModel {
+		action def GenerateTorque { out torque :> ISQ::torque; }
+		part def LogicalElement;
+		part def TorqueGenerator :> LogicalElement {
+			perform action generateTorque : GenerateTorque;
 		}	
+		action providePower {
+			action generateTorque : GenerateTorque;
+		}
+		part torqueGenerator : TorqueGenerator {
+			perform providePower.generateTorque :>> generateTorque;
+		}
+		satisfy torqueGeneration by torqueGenerator;			
 	}
-	package Views {
-		private import ViewDefinitions::*;
-		private import PartsTree::vehicle;
-		view vehicleSafetyFeatureView : SafetyFeatureView {
-			expose vehicle::**;
+	package PhysicalModel {
+		part def PhysicalElement;
+		part def PowerTrain :> PhysicalElement;
+		part powerTrain : PowerTrain {
+			part engine {
+				perform providePower.generateTorque;
+			}
 		}
-		view vehicleMandatorySafetyFeatureView :> vehicleSafetyFeatureView {
-			filter Safety::isMandatory;
-		}
-		view vehicleMandatorySafetyFeatureViewStandalone {
-			expose vehicle::**[@Safety and Safety::isMandatory];
-			render asElementTable;
-		}	
+	}
+	allocation def LogicalToPhysical {
+		end logical : LogicalElement;
+		end physical : PhysicalElement;
+	}
+	allocation torqueGenAlloc : LogicalToPhysical 
+		allocate logical ::> torqueGenerator to physical ::> powerTrain {
+		allocate torqueGenerator.generateTorque to powerTrain.engine.generateTorque;		
 	}
 }

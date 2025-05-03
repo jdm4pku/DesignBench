@@ -1,72 +1,67 @@
-package 'EngineConfigurationTradeoff' {
-	private import ScalarValues::Real;
-	private import TradeStudies::*;
-	private import Definitions::*;
-	private import Usages::*;
-	package Definitions {
-		part def Vehicle;
-		part def Engine {
-			power : ISQ::PowerValue;
-			mass : ISQ::MassValue;
-			efficiency : Real;
-			reliability : Real;
-			cost : Real;
+package 'VehicleLongitudinalDynamicsSimulation' {
+	private import ISQ::*;
+	package VehicleModel {
+		part def Vehicle {
+			attribute mass :> ISQ::mass;
 		}
-		part def Piston;
-		part def Cylinder;
-		part def ConnectingRod;
-		part def CrankShaft;
-		part def '4CylCrankShaft' :> CrankShaft;
-		part def '6CylCrankShaft' :> CrankShaft;
 	}
-	package Usages {
-		part engine : Engine {
-			part cyl[*] : Cylinder {
-				part p[1] : Piston;
-				part rod[1] : ConnectingRod;
-			}
-			part cs : CrankShaft;
-		}
-		variation part engineChoice :> engine {
-			variant part '4cylEngine' {
-				part :>> cyl[4];
-				part :>> cs : '4CylCrankShaft';
-			}
-			variant part '6cylEngine' {
-				part :>> cyl[6];
-				part :>> cs : '6CylCrankShaft';
-			}
-		}
-		part vehicle : Vehicle {
-			part engine[1] :> engineChoice = engineChoice::'6cylEngine' {
-				assert constraint engineSelectionRational { 
-					engine == Analysis::engineTradeStudy.selectedAlternative
+	package DynamicsModel {
+	    calc def Acceleration {
+	    	in p : PowerValue;
+	    	in m : MassValue;
+	    	in v : SpeedValue;
+	    	return : AccelerationValue = p / (m * v);
+	    }
+	    calc def Velocity {
+	    	in v0 : SpeedValue; 
+	    	in a : AccelerationValue; 
+	    	in dt : TimeValue;
+	    	return : SpeedValue = v0 + a * dt;
+	    }
+	    calc def Position {
+	    	in x0 : LengthValue;
+	    	in v : SpeedValue; 
+	    	in dt : TimeValue;
+	    	return : LengthValue = x0 + v * dt;
+	    }
+	    action def StraightLineDynamics {
+	        in power : PowerValue;
+	        in mass : MassValue;
+	        in delta_t : TimeValue;
+	        in x_in : LengthValue;
+	        in v_in : SpeedValue;
+	        out x_out : LengthValue = Position(x_in, v_in, delta_t);
+	        out v_out : SpeedValue = Velocity(v_in, a_out, delta_t);
+	        out a_out : AccelerationValue = Acceleration(power, mass, v_in);
+	    }
+	}
+	package AnalysisModel {
+		private import VehicleModel::*;
+		private import DynamicsModel::*;
+		private import SampledFunctions::*;
+		private import ScalarValues::Natural;
+		private import SequenceFunctions::*;
+		analysis def DynamicsAnalysis {
+			subject vehicle : Vehicle;
+			in attribute powerProfile :> ISQ::power[*];
+			in attribute initialPosition :> ISQ::length;
+			in attribute initialSpeed :> ISQ::speed;
+			in attribute deltaT :> ISQ::time;
+			return attribute accelerationProfile :> ISQ::acceleration[*] := ();
+			private attribute position := initialPosition;
+			private attribute speed := initialSpeed;
+			for i in 1..powerProfile->size()-1 {
+				perform action dynamics : StraightLineDynamics {
+					in power = powerProfile#(i);
+					in mass = vehicle.mass;
+					in delta_t = deltaT;
+					in x_in = position;
+					in v_in = speed;
 				}
+				then assign position := dynamics.x_out;
+				then assign speed := dynamics.v_out;
+				then assign accelerationProfile := accelerationProfile->including(dynamics.a_out);
 			}
-		}
-	}
-	package Analysis {
-		calc def EngineEvaluation {
-			in power : ISQ::PowerValue;
-			in mass : ISQ::MassValue; 
-			in efficiency : Real; 
-			in cost : Real;
-			return evaluation : Real;
-		}	
-		analysis engineTradeStudy : TradeStudy {
-			subject : Engine[1..*] = all engineChoice;
-			objective : MaximizeObjective;
-			calc :>> evaluationFunction {
-				in part anEngine :>> alternative : Engine;
-				calc powerRollup { in engine = anEngine; return power:>ISQ::power; }
-				calc massRollup { in engine = anEngine; return mass:>ISQ::mass; }
-				calc efficiencyRollup { in engine = anEngine; return efficiency: Real; }
-				calc costRollup { in engine = anEngine; return cost: Real; }
-				return :>> result : Real = EngineEvaluation(
-					powerRollup.power, massRollup.mass, efficiencyRollup.efficiency, costRollup.cost
-				);
-			}
-			return part :>> selectedAlternative : Engine;
 		}
 	}
 }

@@ -1,11 +1,22 @@
-package 'LayeredSystemDependency' {
-	package 'Application Layer';
-	package 'Service Layer';
-	package 'Data Layer';
-	dependency Use from 'Application Layer' to 'Service Layer';
-	dependency from 'Service Layer' to 'Data Layer';
-	attribute x;
-	attribute y;
-	attribute z;
-	dependency z to x, y;
+package 'PowertrainFunctiontoComponentMapping' {
+	private import LogicalModel::*;
+	private import PhysicalModel::*;
+	package LogicalModel {
+		action providePower {
+			action generateTorque;
+		}
+		part torqueGenerator {
+			perform providePower.generateTorque;
+		}
+	}
+	package PhysicalModel {
+		part powerTrain {
+			part engine {
+				perform providePower.generateTorque;
+			}
+		}
+	}
+	allocate torqueGenerator to powerTrain {
+		allocate torqueGenerator.generateTorque to powerTrain.engine.generateTorque;
+	}
 }

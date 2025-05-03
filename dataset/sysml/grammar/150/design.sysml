@@ -1,55 +1,34 @@
-package 'MaterialScienceBase' {
-	private import ScalarValues::Real;
-	private import Quantities::*;
-	private import MeasurementReferences::*;
-	private import SI::*;
-    attribute def AtomicMassValue :> MassValue;
-	attribute def TensileStrengthUnit :> DerivedUnit {
-        private attribute lengthPF: QuantityPowerFactor[1] { :>> quantity = isq.L; :>> exponent = -1; }
-        private attribute massPF: QuantityPowerFactor[1] { :>> quantity = isq.M; :>> exponent = 1; }
-        private attribute durationPF: QuantityPowerFactor[1] { :>> quantity = isq.T; :>> exponent = -2; }
-        attribute :>> quantityDimension { :>> quantityPowerFactors = (lengthPF, massPF, durationPF); }		
+package 'PubSubMessagingFlow' {
+	private import ScalarValues::*;
+	private import PayloadDefinitions::*;
+	package PayloadDefinitions {
+	    item def Subscribe {
+	    	attribute topic : String;
+	    	ref part subscriber;
+	    }
+		item def Publish {
+			attribute topic : String;
+			ref publication;
+		}
+		item def Deliver {
+			ref publication;
+		}
 	}
-    attribute def TensileStrengthValue :> ScalarQuantityValue {
-		attribute :>> num: Real;
-    	attribute :>> mRef: TensileStrengthUnit;
-    }
-    attribute <'N/mm²'> 'newton per square millimetre' : TensileStrengthUnit = N / mm^2;
-    part def Substance;
-    part def Material :> Substance;
-    part def Metal :> Material {
-        attribute atomicMass: AtomicMassValue[1];
-    }
-    attribute def MaterialFraction {
-        ref material: Material[1]; 
-        attribute massFraction: MassFractionValue[1];
-    }
-    attribute def MassFractionValue :> DimensionOneValue;    
-    part def Alloy :> Material {
-        attribute fractions: MaterialFraction[2..*];
-    }
-    individual def Iron :> Metal {
-        attribute :>> atomicMass = 55.845 [Da];
-    }
-    individual def Carbon :> Metal {
-        attribute atomicMass :>> Metal::atomicMass = 12.011[Da];
-    }
-    individual def Manganese :> Metal {
-        attribute atomicMass :>> Metal::atomicMass = 54.938[Da];
-    }
-    individual def Steel_980 :> Alloy {
-        attribute fraction1 :> fractions {
-        	ref :>> material : Iron;
-        	attribute :>> massFraction = 0.9862[one];
-        }
-        attribute fraction2 :> fractions {
-        	ref :>> material : Carbon;
-        	attribute :>> massFraction = 0.9862[one];
-        }
-        attribute fraction3 :> fractions {
-        	ref :>> material : Manganese;
-        	attribute :>> massFraction = 0.9862[one];
-        }
-        attribute tensileStrength: TensileStrengthValue = 980['N/mm²'];
-    }
+	occurrence def PubSubSequence {
+		part producer[1] {
+			event publish_message.source;
+		}
+		message publish_message of Publish[1];
+		part server[1] {
+			event subscribe_message.target;
+			then event publish_message.target;
+			then event deliver_message.source;
+		}
+		message subscribe_message of Subscribe[1];
+		message deliver_message of Deliver[1];
+		part consumer[1] {
+			event subscribe_message.source;
+			then event deliver_message.target;
+		}
+	}
 }

@@ -1,114 +1,80 @@
-package 'VehicleProductLineConfigurationSystem' {
-	private import RequirementsModel::*;
-	private import DesignModel::*;
-	private import VariantDefinitions::*;
-	private import ControlFunctions::forAll;
-	package RequirementsModel {
-		requirement def EnginePerformanceRequirement;
-		requirement highPerformanceRequirement : EnginePerformanceRequirement;
-		requirement normalPerformanceRequirement : EnginePerformanceRequirement;
-	}
-	package DesignModel {
-		part def Vehicle;
-		part def Engine;
-		part def Transmission;
-		part def Clutch;
-		part def Driveshaft;
-		part def RearAxleAssembly;
-		part def Wheel;
-		port def FuelCmdPort;
-		port def ClutchPort;
-		port def ShaftPort_b;
-		port def ShaftPort_c;
-		port def ShaftPort_d;
-		port def VehicleToRoadPort;
-		port def WheelToRoadPort;
-		part vehicle : Vehicle {
-			port fuelCmdPort;
-			bind fuelCmdPort = engine.fuelCmdPort;
-			part engine : Engine[1] {
-				port fuelCmdPort : FuelCmdPort;
-			}
-			part transmission : Transmission[1] {
-				part clutch: Clutch[1] {
-					port clutchPort : ClutchPort;
-				}
-			}
-			part driveshaft : Driveshaft[1] {
-				port shaftPort_b : ShaftPort_b;
-				port shaftPort_c : ShaftPort_c;
-			}
-			part rearAxleAssembly : RearAxleAssembly {
-				part rearWheels : Wheel[2] {
-					port wheelToRoadPort : WheelToRoadPort;
-				}
-			}
-			port vehicleToRoadPort : VehicleToRoadPort {
-				port wheelToRoadPort : WheelToRoadPort[2];
+package 'VehicleMassComplianceVerification' {
+	private import VerificationCases::*;
+	private import Definitions::*;
+	package Definitions {
+		requirement def <'2'> MassRequirement {
+			attribute massActual :> ISQ::mass;
+			attribute massReqd :> ISQ::mass;
+			require constraint { massActual <= massReqd }
+		}
+		part def Vehicle {
+			attribute mass :> ISQ::mass;
+		}
+		part def MassVerificationSystem;
+		part def Scale;
+		part def TestOperator;
+		individual def TestVehicle1 :> Vehicle;
+		individual def TestVehicle2 :> Vehicle;
+		individual def TestSystem :> MassVerificationSystem;
+		verification def MassTest {
+			objective massVerificationObjective {
+				verify requirement massRequirement : MassRequirement;
 			}
 		}
 	}
-	package VariantDefinitions {
-		part def '4CylEngine' :> Engine;
-		part def '6CylEngine' :> Engine;
-		part def ManualTransmission :> Transmission;
-		part def AutomaticTransmission :> Transmission;
-		part def ManualClutch :> Clutch;
-		part def AutomaticClutch :> Clutch;
-		port def ManualClutchPort :> ClutchPort;
-		port def AutomaticClutchPort :> ClutchPort;
-		part def NarrowRimWheel :> Wheel;
-		part def WideRimWheel :> Wheel;		
-	}
-	package VariabilityModel {
-		part anyVehicleConfig :> vehicle {
-			variation requirement engineRqtChoice : EnginePerformanceRequirement {
-				variant highPerformanceRequirement;
-				variant normalPerformanceRequirement;
-			}
-			variation part engineChoice :>> engine {
-				variant part '4cylEngine' : '4CylEngine';
-				variant part '6cylEngine' : '6CylEngine';
-			}
-			satisfy engineRqtChoice by engineChoice;
-			assert constraint 'engine choice constraint' {
-				if engineRqtChoice == engineRqtChoice::highPerformanceRequirement? 
-					engineChoice == engineChoice::'6cylEngine' 
-				else
-					engineChoice == engineChoice::'4cylEngine'
-			}
-			variation part transmissionChoice :>> transmission {
-				variant part manualTransmission : ManualTransmission {
-					part :>> clutch : ManualClutch {
-						port :>> clutchPort : ManualClutchPort;
-					}
-				}
-				variant part automaticTransmission : AutomaticTransmission {
-					part :>> clutch : AutomaticClutch {
-						port :>> clutchPort : AutomaticClutchPort;
-					}
-				}
-			}
-			assert constraint 'engine-transmission selection constraint' {
-				(engineChoice == engineChoice::'4cylEngine' and transmissionChoice == transmissionChoice::manualTransmission) xor
-				(engineChoice == engineChoice::'6cylEngine' and transmissionChoice == transmissionChoice::automaticTransmission)
-			}
-			part :>> rearAxleAssembly {
-				variation part rearWheelChoice :>> rearWheels {
-					variant part narrowRimWheel : NarrowRimWheel;
-					variant part wideRimWheel : WideRimWheel;
-				}
-			}
-			assert constraint 'engine-wheel selection constraint' {
-				(engineChoice == engineChoice::'4cylEngine' and 
-					rearAxleAssembly.rearWheelChoice->forAll {in ref w; w == rearAxleAssembly::rearWheelChoice::narrowRimWheel}) xor
-				(engineChoice == engineChoice::'6cylEngine' and 
-					rearAxleAssembly.rearWheelChoice->forAll {in ref w; w == rearAxleAssembly::rearWheelChoice::wideRimWheel})
-			}	
+	package Usages {
+		requirement <'2.1'> vehicleMassRequirement : MassRequirement {
+			subject vehicle : Vehicle;
+			:>> massActual = vehicle.mass;		
+			:>> massReqd = 2500 [SI::kg];
 		}
-		variation part vehicleChoice :> anyVehicleConfig {
-			variant part vehicle_c1;
-			variant part vehicle_c2;
-		}	
+		part vehicle1_c2 : Vehicle {
+		}
+		verification vehicleMassTest : MassTest {
+			subject testVehicle : Vehicle;
+			objective vehicleMassVerificationObjective {
+				verify vehicleMassRequirement :>> massRequirement;
+			}
+			action collectData {
+				in part testVehicle : Vehicle = vehicleMassTest.testVehicle;
+				out massMeasured :> ISQ::mass;
+			}
+			action processData {
+				in massMeasured :> ISQ::mass = collectData.massMeasured;
+				out massProcessed :> ISQ::mass;
+			}
+			action evaluateData {
+				in massProcessed :> ISQ::mass = processData.massProcessed;
+				out verdict : VerdictKind = 
+					PassIf(vehicleMassRequirement(vehicle = testVehicle(mass = massProcessed)));
+			}
+			return verdict : VerdictKind = evaluateData.verdict;
+		}
+		part massVerificationSystem : MassVerificationSystem {
+			perform vehicleMassTest {
+				in part :>> testVehicle = vehicleUnderTest;
+			}
+			ref part vehicleUnderTest : Vehicle;
+			part testOperator : TestOperator;
+			part scale : Scale {
+				perform vehicleMassTest.collectData {
+					in part :>> testVehicle;
+					measurement = testVehicle.mass;
+					out :>> massMeasured = measurement;
+				}
+			}
+		}
+		individual testSystem : TestSystem :> massVerificationSystem {
+			timeslice test1 {
+				ref individual :>> vehicleUnderTest : TestVehicle1 :> vehicle1_c2 {
+					:>> mass = 2500 [SI::kg];
+				}
+			}
+			then timeslice test2 {
+				ref individual :>> vehicleUnderTest : TestVehicle2 :> vehicle1_c2 {
+					:>> mass = 2500 [SI::kg];
+				}
+			}
+		}
 	}
 }

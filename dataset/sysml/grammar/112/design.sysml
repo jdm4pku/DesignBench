@@ -1,6 +1,7 @@
-package 'AutomotiveBehaviorModeling' {
+package '5-State-based Behavior-1' {
 	private import ScalarValues::*;
 	private import ISQ::*;
+	private import '3a-Function-based Behavior-1'::*;
 	package Definitions {
 		part def VehicleA {
 			perform action 'provide power': 'Provide Power';
@@ -11,11 +12,9 @@ package 'AutomotiveBehaviorModeling' {
 		}
 		state def 'Vehicle States';
 		state def 'Controller States';	
-		action def 'Provide Power';
 		action def 'Perform Self Test';
 		action def 'Apply Parking Brake';
 		action def 'Sense Temperature' { out temp: TemperatureValue; }
-		attribute def FuelCmd;
 		attribute def 'Vehicle Start Signal';
 		attribute def 'Vehicle On Signal';
 		attribute def 'Vehicle Off Signal';
@@ -25,12 +24,12 @@ package 'AutomotiveBehaviorModeling' {
 		attribute def 'Return to Normal';
 	}
 	package Usages {
-		private import Definitions::*;		 
-		action 'provide power': 'Provide Power';
+		private import Definitions::*;
 		action 'perform self test': 'Perform Self Test';
 		action 'apply parking brake': 'Apply Parking Brake';
 		action 'sense temperature': 'Sense Temperature';
 		state 'vehicle states': 'Vehicle States' parallel {
+			ref vehicle : VehicleA;
 			state 'operational states' {			
 				entry action initial {
 				}
@@ -42,7 +41,7 @@ package 'AutomotiveBehaviorModeling' {
 					if vehicle1_c1.'brake pedal depressed'
 					do send 'Start Signal'() to vehicle1_c1.vehicleController
 					then starting {					
-				}
+					}	
 				state starting;
 				transition 'starting-on'
 					first starting
@@ -87,7 +86,7 @@ package 'AutomotiveBehaviorModeling' {
 		}
 		state 'controller states': 'Controller States' parallel {
 			state 'operational controller states' {
-				entry action initial; 		
+				entry action initial; 
 				transition initial then off;
 				state off;
 				transition 'off-on'
@@ -111,9 +110,8 @@ package 'AutomotiveBehaviorModeling' {
 			perform 'provide power' :>> VehicleA::'provide power' {			
 				in fuelCmd = fuelCmdPort.fuelCmd;
 			}
-			
 			exhibit 'vehicle states' :>> VehicleA::'vehicle states' {
-			}
+			}	
 			//*
 			// The above is semantically equivalent to:
 			ref state 'vehicle states' :> Usages::'vehicle states', exhibitedStates

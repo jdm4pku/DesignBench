@@ -1,42 +1,36 @@
-package 'VehicleSafetyandSecurityComplianceCatalog' {
-	private import ScalarValues::*;
-	private import AnnotationDefinitions::*;
-	private import PartsTree::*;
-	package AnnotationDefinitions {
-		metadata def Safety {
-			attribute isMandatory : Boolean;
+package 'AutomotiveECUModeling' {
+	package LibraryModel {
+		part def ECU;
+	}
+	package UserModel {	
+		package Definitions {
+			private import LibraryModel::*;
+			part def VehicleControlUnit :> ECU;
+			part def EngineControlUnit :> ECU;
+			part def Vehicle;
+			part def Engine;
+			part def CanBus;
+			port def BusIF;
 		}
-		metadata def Security;
-	}
-	package PartsTree {
-		part vehicle {
-			part interior {
-				part alarm {@Security;}
-				part seatBelt[2] {@Safety{isMandatory = true;}}
-				part frontSeat[2];
-				part driverAirBag {@Safety{isMandatory = false;}}
-			}
-			part bodyAssy {
-				part body;
-				part bumper {@Safety{isMandatory = true;}}
-				part keylessEntry {@Security;}
-			}
-			part wheelAssy {
-				part wheel[2];
-				part antilockBrakes[2] {@Safety{isMandatory = false;}}
+		package Usages {
+			private import Definitions::*;
+			part vehicle1: Vehicle {
+				part vehicleControlUnit : VehicleControlUnit {
+					port busIF: ~BusIF;
+				}
+				connect vehicleControlUnit.busIF to canBus.vehicleControlIF;
+				part canBus: CanBus {
+					port vehicleControlIF: BusIF;
+					port engineControlIF: BusIF;
+					port sensorIF: BusIF;					
+				}
+				connect engine.engineControlUnit.busIF to canBus.engineControlIF;
+				part engine: Engine {
+					part engineControlUnit: EngineControlUnit {
+						port busIF: ~BusIF;
+					}				
+				}
 			}
 		}
-	}
-	package 'Safety Features' {	
-		private import vehicle::**[@Safety];
-	}
-	package 'Security Features' {		
-		private import vehicle::**[@Security];
-	}
-	package 'Safety & Security Features' {		 
-		private import vehicle::**[@Safety or @Security];
-	}
-	package 'Mandatory Saftey Features' {
-		private import vehicle::**[@Safety and Safety::isMandatory];
 	}
 }

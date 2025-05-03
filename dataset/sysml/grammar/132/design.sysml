@@ -1,50 +1,24 @@
-package 'VehicleSafetyandSecurityFeatureCatalog' {
-	private import ScalarValues::*;
-	private import AnnotationDefinitions::*;
-	private import PartsTree::*;
-	package AnnotationDefinitions {
-		metadata def Safety {
-			attribute isMandatory : Boolean;
+package 'SecurityMetadataExtensions' {
+	private import 'User Defined Extensions'::*;
+	package 'User Defined Extensions' {
+		enum def ClassificationLevel {
+			uncl;
+			conf;
+			secret;
 		}
-		metadata def Security;
-	}
-	package PartsTree {
-		part vehicle {
-			part interior {
-				part alarm {@Security;}
-				part seatBelt[2] {@Safety{isMandatory = true;}}
-				part frontSeat[2];
-				part driverAirBag {@Safety{isMandatory = false;}}
-			}
-			part bodyAssy {
-				part body;
-				part bumper {@Safety{isMandatory = true;}}
-				part keylessEntry {@Security;}
-			}
-			part wheelAssy {
-				part wheel[2];
-				part antilockBrakes[2] {@Safety{isMandatory = false;}}
-			}
+		metadata def Classified {
+			ref :>> annotatedElement : SysML::PartUsage;
+			attribute classificationLevel : ClassificationLevel[1];
 		}
 	}
-	package 'Safety Features' {
-		/* Parts that contribute to safety. */		
-		private import vehicle::**;
-		filter @Safety;
+	part part_X {
+		metadata Classified {
+			classificationLevel = ClassificationLevel::conf;
+		}
 	}
-	package 'Security Features' {
-		/* Parts that contribute to security. */		
-		private import vehicle::**;
-		filter @Security;
-	}
-	package 'Safety & Security Features' {
-		/* Parts that contribute to safety OR security. */		 
-		private import vehicle::**;
-		filter @Safety or @Security;
-	}
-	package 'Mandatory Safety Features' {
-		/* Parts that contribute to safety AND are mandatory. */
-		private import vehicle::**;
-		filter @Safety and Safety::isMandatory;
+	part part_Y {
+		@Classified {
+			classificationLevel = ClassificationLevel::conf;
+		}
 	}
 }

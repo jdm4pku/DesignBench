@@ -1,1 +1,1 @@
-State-based Behavior
+Individual and Snapshots
