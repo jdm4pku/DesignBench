@@ -1,4 +1,4 @@
-package 'Variation Definitions' {
+package 'EngineConfigurationVariants' {
 	private import ScalarValues::Real;
 	private import SI::mm;
 	attribute def Diameter :> ISQ::LengthValue;

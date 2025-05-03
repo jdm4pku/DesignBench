@@ -1,4 +1,4 @@
-package '15_07-System of Units and Scales' {
+package 'UnitSystemsStandard' {
     private import ISQ::*;
     private import USCustomaryUnits::*;
 }

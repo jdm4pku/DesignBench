@@ -1,4 +1,4 @@
-package 'Verification Case Definition Example' {
+package 'VehicleMassComplianceVerification' {
 	part def Vehicle {
 		attribute mass :> ISQ::mass;
 	}

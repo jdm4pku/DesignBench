@@ -1,4 +1,4 @@
-package '3a-Function-based Behavior-5' {
+package 'VehiclePowertrainOperationalModeManagement' {
 	public import Definitions::*;
 	public import Usages::*;
 	package Definitions {

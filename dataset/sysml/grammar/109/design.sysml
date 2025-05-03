@@ -1,4 +1,4 @@
-package '3c-Function-based Behavior-structure mod-3' {
+package 'DynamicTrailerCouplingReferenceModel' {
 	part def Vehicle;
 	part def VehicleFrame;
 	part def HitchBall;

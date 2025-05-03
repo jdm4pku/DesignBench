@@ -1,4 +1,4 @@
-package '11a-View-Viewpoint' {
+package 'VehicleArchitectureStructuralViewpoint' {
 	package SystemModel {
 		private import SI::*;
 		part def Vehicle;

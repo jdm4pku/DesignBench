@@ -1,4 +1,4 @@
-package '15_11-Variable Length Collection Types' {
+package 'CollectionTypes' {
 	private import ScalarValues::*;
 	private import Collections::*;
 	part def SparePart;

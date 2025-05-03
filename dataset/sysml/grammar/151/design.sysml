@@ -1,4 +1,4 @@
-package '15_19a-Materials with Properties' {
+package 'EngineeringMaterialsLibrary' {
 	private import ScalarValues::*;
 	private import Quantities::*;
 	private import MeasurementReferences::*;

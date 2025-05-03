@@ -1,4 +1,4 @@
-package '15.10-Primitive Data Types' {
+package 'CoreDataTypes' {
 	private import ScalarValues::Integer {
 	}
 	private import ScalarValues::Natural;

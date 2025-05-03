@@ -1,4 +1,4 @@
-package '3c-Function-based Behavior-structure mod-2' {
+package 'VehicleTrailerConnectionStateManagement' {
 	part def Vehicle;
 	part def VehicleFrame;
 	part def HitchBall;

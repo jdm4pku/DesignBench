@@ -1,4 +1,4 @@
-package '15_01-Constants' {
+package 'ScientificReferenceConstants' {
     private import MeasurementReferences::*;
     private import SI::*;
     private import RealFunctions::*;

@@ -1,4 +1,4 @@
-package '15_03-Value Expression' {
+package 'AutomotiveComponents' {
     private import SI::*;
     private import USCustomaryUnits::*;
     part def Vehicle_1 {

@@ -1,4 +1,4 @@
-package 'Allocation Definition Example' {
+package 'PowertrainAllocation' {
 	package LogicalModel {
 		action def ProvidePower;
 		action def GenerateTorque;

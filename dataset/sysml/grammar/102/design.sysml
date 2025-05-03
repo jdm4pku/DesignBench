@@ -1,4 +1,4 @@
-package '2a-Parts Interconnection' {
+package 'VehiclePowertrainSystem' {
 	public import Definitions::*;
 	public import Usages::*;
 	package Definitions {		

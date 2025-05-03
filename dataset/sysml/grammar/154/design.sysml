@@ -1,4 +1,4 @@
-package '18-Use Case' {
+package 'TransportationUseCases' {
 	part def Vehicle;
 	part def Person;
 	part def Environment;

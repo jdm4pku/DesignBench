@@ -1,4 +1,4 @@
-package '3e-Function-based Behavior-item' {
+package 'VehicleAssemblyProcessModeling' {
 	public import Definitions::*;
 	package Definitions {
 		item def VehicleAssembly;

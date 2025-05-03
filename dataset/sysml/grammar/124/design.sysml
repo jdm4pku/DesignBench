@@ -1,4 +1,4 @@
-package '10c-Fuel Economy Analysis' {
+package 'VehicleFuelEfficiencyCompliance' {
 	private import ScalarValues::*;
 	private import Quantities::*;
 	private import MeasurementReferences::*;

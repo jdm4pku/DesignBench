@@ -1,4 +1,4 @@
-package 'Dependency Example' {
+package 'SoftwareHardwareDependencies' {
 	part 'System Assembly' {
 		part 'Computer Subsystem' {
 			// ...

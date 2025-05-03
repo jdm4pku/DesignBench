@@ -1,4 +1,4 @@
-package '6-Individual and Snapshots' {
+package 'VehicleDynamicsTemporalSimulation' {
 	private import ScalarValues::Real;
 	private import Time::DateTime;
 	private import ISQ::*;

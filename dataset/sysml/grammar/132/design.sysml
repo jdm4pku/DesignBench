@@ -1,4 +1,4 @@
-package '13b-Safety and Security Features Element Group-1' {
+package 'VehicleSafetyandSecurityFeatureCatalog' {
 	private import ScalarValues::*;
 	private import AnnotationDefinitions::*;
 	private import PartsTree::*;

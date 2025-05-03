@@ -1,4 +1,4 @@
-package '12b-Allocation' {
+package 'PowertrainFunctiontoComponentMapping' {
 	private import LogicalModel::*;
 	private import PhysicalModel::*;
 	package LogicalModel {

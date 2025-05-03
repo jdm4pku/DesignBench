@@ -1,4 +1,4 @@
-package 'Requirement Definitions' {
+package 'VehicleSystemRequirementsSpecification' {
 	private import ISQ::*;
 	private import SI::*;
 	requirement def MassLimitationRequirement {

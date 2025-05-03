@@ -1,4 +1,4 @@
-package '17b-Sequence-Modeling' {
+package 'PubSubMessagingFlow' {
 	private import ScalarValues::*;
 	private import PayloadDefinitions::*;
 	package PayloadDefinitions {

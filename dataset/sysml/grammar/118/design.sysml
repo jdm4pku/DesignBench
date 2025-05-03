@@ -1,4 +1,4 @@
-package '7a1-Variant Configuration - General Concept-a' {
+package 'ModularVehiclePlatformConfiguration' {
 	action doX;
 	action doY;
 	part part1;

@@ -1,4 +1,4 @@
-package '3a-Function-based Behavior-2' {
+package 'VehiclePowertrainControlLogic' {
 	public import Definitions::*;
 	public import Usages::*;
 	package Definitions {
@@ -43,6 +43,5 @@ package '3a-Function-based Behavior-2' {
 			first 'transfer torque' then engineStopped;		
 			first 'distribute torque' then engineStopped;		
 		}
-	
 	}
 }

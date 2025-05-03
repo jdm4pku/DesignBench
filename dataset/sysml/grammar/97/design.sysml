@@ -1,4 +1,4 @@
-package 'Parts Example-2' {
+package 'VehicleDefinition' {
 	part def Vehicle;	
 	part def Engine;	
 	part def Cylinder;

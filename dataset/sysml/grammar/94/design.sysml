@@ -1,4 +1,4 @@
-package 'Comment Example' {
+package 'Automotive Domain Annotations' {
 	/* This is a comment, which is a part of the model, 
 	 * annotating (by default) it's owning namespace. */
 	comment Comment1 /* This is a named comment. */

@@ -1,5 +1,4 @@
-package '1d-Parts Tree with Reference' {
-	
+package 'VehicleTrailerCouplingSystemModeling' {
 	package Definitions {
 		part def Vehicle;
 		part def Trailer;
@@ -7,12 +6,9 @@ package '1d-Parts Tree with Reference' {
 		part def HitchBall;
 		part def TrailerCoupler;
 	}
-	
 	package Usages {
 		private import Definitions::*;
-		
 		part vehicle_trailer_system {
-			
 			part vehicle1_c1: Vehicle {
 				ref hitchBall : HitchBall {
 					/*
@@ -23,19 +19,16 @@ package '1d-Parts Tree with Reference' {
 					 */
 				}
 			}
-			
 			bind vehicle1_c1.hitchBall = trailerHitch.hitchBall {
 				/*
 				 * This is a binding connector between the 'hitchBall' in 'vehicle1_c1'
 				 * and the 'hitchBall' in 'trailerHitch'.
 				 */			
 			}
-			
 			part trailerHitch: TrailerHitch {				
 				part hitchBall: HitchBall;
 				part trailerCoupler: TrailerCoupler;
 			}
-			
 			part trailer1: Trailer {
 				ref trailerCoupler : TrailerCoupler = trailerHitch.trailerCoupler {
 					/*

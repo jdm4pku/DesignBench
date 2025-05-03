@@ -1,4 +1,4 @@
-package 'Metadata Example-1' {
+package 'AutomotiveFeatureTaggingSystem' {
 	metadata def SafetyFeature;
 	metadata def SecurityFeature {
 		:> annotatedElement : SysML::PartDefinition;

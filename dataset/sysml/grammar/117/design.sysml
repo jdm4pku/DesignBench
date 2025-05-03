@@ -1,4 +1,4 @@
-package '7a-Variant Configuration - General Concept' {
+package 'VehicleConfigurationVariantManagement' {
 	part def Vehicle;
 	part part1;
 	part part2;

@@ -1,4 +1,4 @@
-package '10d-Dynamics Analysis' {
+package 'VehicleLongitudinalDynamicsSimulation' {
 	private import ISQ::*;
 	package VehicleModel {
 		part def Vehicle {

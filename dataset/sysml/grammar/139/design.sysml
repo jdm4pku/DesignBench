@@ -1,4 +1,4 @@
-package '15_02-Basic Value Properties' {
+package 'AutomotiveComponentSpecificationModel' {
 	private import ScalarValues::*;
     attribute def LengthValue :> Real {
 	}

@@ -1,4 +1,4 @@
-package 'Metadata Example-2' {
+package 'VehicleDynamicsSimulation' {
 	action computeDynamics {
 		private import AnalysisTooling::*;
 		metadata ToolExecution {

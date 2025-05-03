@@ -1,4 +1,4 @@
-package 'Use Case Definition Example' {
+package 'TransportationScenario' {
 	part def Vehicle;
 	part def Person;
 	part def Environment;

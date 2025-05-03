@@ -1,4 +1,4 @@
-package '14c-Language-Extensions' {
+package 'MedicalDeviceFMEAFramework' {
 	private import ScalarValues::*;
 	library package FMEALibrary {
 		abstract occurrence def Situation;

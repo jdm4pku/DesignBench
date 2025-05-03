@@ -1,4 +1,4 @@
-package '1c-Parts Tree Redefinition' {
+package 'Vehicle Configuration Variant Modeling {
 	private import SI::kg;
 	package Definitions {	
 		part def Vehicle {

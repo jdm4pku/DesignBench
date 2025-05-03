@@ -1,4 +1,4 @@
-library package 'Model Library Example' {
+library package 'RiskandFailureModelingLibrary' {
 	private import ScalarValues::Real;
 	private import RiskMetadata::Level;
 	abstract occurrence def Situation;

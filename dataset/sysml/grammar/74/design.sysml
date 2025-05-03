@@ -1,4 +1,4 @@
-package 'Trade Study Analysis Example' {
+package 'EngineSelectionTradeStudy' {
 	private import ScalarValues::Real;
 	private import TradeStudies::*;
 	part def Engine;

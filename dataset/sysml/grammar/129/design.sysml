@@ -1,4 +1,4 @@
-package '12b-Allocation-1' {
+package 'PowertrainFunctionComponentAllocation' {
 	private import SI::*;
 	private import RequirementModel::*;
 	private import LogicalModel::*;
@@ -40,7 +40,6 @@ package '12b-Allocation-1' {
 	}
 	allocation torqueGenAlloc : LogicalToPhysical 
 		allocate logical ::> torqueGenerator to physical ::> powerTrain {
-			
 		allocate torqueGenerator.generateTorque to powerTrain.engine.generateTorque;		
 	}
 }

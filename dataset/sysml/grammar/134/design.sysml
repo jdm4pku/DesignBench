@@ -1,4 +1,4 @@
-package '13b-Safety and Security Features Element Group' {
+package 'VehicleSafetyandSecurityComponentRegistry' {
 	part vehicle1_c1 {
 		part interior {
 			part alarm;

@@ -1,4 +1,4 @@
-package '8-Requirements' {
+package 'AutomotiveSpecificationSystem' {
 	private import ScalarValues::Real;
 	private import ISQ::*;
 	private import SI::*;

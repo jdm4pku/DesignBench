@@ -1,4 +1,4 @@
-package '14a-Language Extensions' {
+package 'SecurityMetadataExtensions' {
 	private import 'User Defined Extensions'::*;
 	package 'User Defined Extensions' {
 		enum def ClassificationLevel {

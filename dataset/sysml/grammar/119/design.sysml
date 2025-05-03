@@ -1,4 +1,4 @@
-package '7b-Variant Configurations' {
+package 'VehicleProductLineConfigurationSystem' {
 	private import RequirementsModel::*;
 	private import DesignModel::*;
 	private import VariantDefinitions::*;

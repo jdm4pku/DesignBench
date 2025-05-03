@@ -1,4 +1,4 @@
-package '15_12-Compound Value Type' {
+package 'StructuredDataTypes' {
 	private import ScalarValues::*;
 	private import USCustomaryUnits::'in';
     attribute def PositionVector {

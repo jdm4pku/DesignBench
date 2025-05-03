@@ -1,4 +1,4 @@
-package '2c-Parts Interconnection-Multiple Decompositions' {
+package 'Multi-ArchitectureSystemIntegration' {
 	part def A1;
 	part def B11 {
 		port pe;

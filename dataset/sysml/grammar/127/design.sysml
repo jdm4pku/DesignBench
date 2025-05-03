@@ -1,5 +1,5 @@
 private import Views::*; 
-package '11b-Safety and Security Feaure Views' {
+package 'VehicleSafetyandSecurityFeatureManagement' {
 	private import ScalarValues::*;
 	package AnnotationDefinitions {	
 		metadata def Safety {

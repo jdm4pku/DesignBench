@@ -1,4 +1,4 @@
-package '12a-Dependency' {
+package 'LayeredSystemDependency' {
 	package 'Application Layer';
 	package 'Service Layer';
 	package 'Data Layer';

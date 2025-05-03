@@ -1,4 +1,4 @@
-package '5-State-based Behavior-1a' {
+package 'AutomotiveBehaviorModeling' {
 	private import ScalarValues::*;
 	private import ISQ::*;
 	package Definitions {

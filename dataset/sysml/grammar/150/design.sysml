@@ -1,4 +1,4 @@
-package '15_19-Materials with Properties' {
+package 'MaterialScienceBase' {
 	private import ScalarValues::Real;
 	private import Quantities::*;
 	private import MeasurementReferences::*;

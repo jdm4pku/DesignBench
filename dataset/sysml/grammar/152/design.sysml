@@ -1,4 +1,4 @@
-package '17a-Sequence-Modeling' {
+package 'PubSubInteractionModel' {
 	private import ScalarValues::*;
 	private import PayloadDefinitions::*;
 	package PayloadDefinitions {

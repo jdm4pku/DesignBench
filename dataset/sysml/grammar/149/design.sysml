@@ -1,4 +1,4 @@
-package '15_13-Discretely Sampled Function Value' {
+package 'AerospaceTrajectorySampling' {
 	private import SampledFunctions::SampledFunction;
 	private import SampledFunctions::SamplePair;
 	private import Collections::Array;

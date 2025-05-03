@@ -1,4 +1,4 @@
-package '10b-Trade-off Among Alternative Configurations' {
+package 'EngineConfigurationTradeoff' {
 	private import ScalarValues::Real;
 	private import TradeStudies::*;
 	private import Definitions::*;

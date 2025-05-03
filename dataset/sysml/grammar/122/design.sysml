@@ -1,4 +1,4 @@
-package '10a-Analysis' {
+package 'VehicleMassProperty' {
 	private import ISQ::*;
 	private import SI::*;
 	private import NumericalFunctions::*;

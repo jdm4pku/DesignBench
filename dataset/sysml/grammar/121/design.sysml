@@ -1,4 +1,4 @@
-package '9-Verification-simplified' {
+package 'VehicleMassComplianceVerification' {
 	private import VerificationCases::*;
 	private import Definitions::*;
 	package Definitions {

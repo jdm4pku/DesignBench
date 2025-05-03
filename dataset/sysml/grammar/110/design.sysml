@@ -1,4 +1,4 @@
-package '3d-Function-based Behavior-item' {
+package 'VehicleFuelDeliverySystem' {
 	private import ScalarValues::Real;
 	public import Definitions::*;
 	public import Usages::*;

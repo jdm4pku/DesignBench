@@ -5,3 +5,6 @@
 3. 将翻译后的英文保存到dataset/sysml/grammar/xx/nl_en.txt文件。
 Note:有些文件还没check完成自然语言，这个可以先不用考虑，直接按照上面的逻辑实现就行
 """
+import os
+import openai
+import time

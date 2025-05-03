@@ -1,4 +1,4 @@
-package 'Documentation Example' {
+package 'AutomotiveDocumentation' {
 	doc /* This is documentation of the owning 
 	     * package.
 	     */

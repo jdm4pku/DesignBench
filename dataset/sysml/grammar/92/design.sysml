@@ -1,4 +1,4 @@
-package 'Viewpoint Example' {	
+package 'SystemArchitectureViewpoints' {	
 	part def 'Systems Engineer';
 	part def 'IV&V';
 	concern 'system breakdown' {

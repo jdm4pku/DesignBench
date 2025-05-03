@@ -1,4 +1,4 @@
-package '14b-Language-Extensions' {
+package 'AutomotiveECUModeling' {
 	package LibraryModel {
 		part def ECU;
 	}

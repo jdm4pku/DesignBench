@@ -1,4 +1,4 @@
-package '1a-Parts Tree' {
+package 'VehicleStructuralArchitectureModel' {
 	private import SI::kg;
 	package Definitions {	
 		part def Vehicle {
@@ -11,7 +11,7 @@ package '1a-Parts Tree' {
 			 * library model.
 			 */
 			}
-		}		
+		}
 		part def AxleAssembly;		
 		part def Axle { 
 			attribute mass :> ISQ::mass;

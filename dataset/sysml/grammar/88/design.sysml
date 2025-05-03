@@ -1,4 +1,4 @@
-package 'Filtering Example-2' {
+package 'VehicleSafetyCompliance' {
 	private import ScalarValues::Boolean;
 	metadata def Safety {
 		attribute isMandatory : Boolean;

@@ -1,4 +1,4 @@
-package 'Port Conjugation Example' {
+package 'FuelFlowManagement' {
 	attribute def Temp;
 	part def Fuel;
 	port def FuelPort {
