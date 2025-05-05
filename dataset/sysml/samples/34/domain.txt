@@ -1,1 +1,1 @@
-传感器
+Embedded device

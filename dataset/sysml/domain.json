@@ -1,0 +1,54 @@
+[
+  {
+    "domain": "Vehicle Traffic",
+    "count": 108
+  },
+  {
+    "domain": "Photography Technique",
+    "count": 12
+  },
+  {
+    "domain": "Information Management",
+    "count": 8
+  },
+  {
+    "domain": "Simulation Calculation",
+    "count": 4
+  },
+  {
+    "domain": "Energy materials",
+    "count": 3
+  },
+  {
+    "domain": "Network Communication",
+    "count": 3
+  },
+  {
+    "domain": "Fault diagnosis",
+    "count": 3
+  },
+  {
+    "domain": "Aerospace",
+    "count": 3
+  },
+  {
+    "domain": "Confidentiality and security",
+    "count": 2
+  },
+  {
+    "domain": "Systems Engineering",
+    "count": 2
+  },
+  {
+    "domain": "Embedded device",
+    "count": 1
+  },
+  {
+    "domain": "Medical Health",
+    "count": 1
+  },
+  {
+    "domain": "Water resource transportation",
+    "count": 1
+  }
+]

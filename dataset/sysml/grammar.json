@@ -1,0 +1,190 @@
+[
+  {
+    "domain": "Expression",
+    "count": 18
+  },
+  {
+    "domain": "Function-based Behavior",
+    "count": 8
+  },
+  {
+    "domain": "Part",
+    "count": 7
+  },
+  {
+    "domain": "Constraint",
+    "count": 7
+  },
+  {
+    "domain": "Occurrence",
+    "count": 7
+  },
+  {
+    "domain": "Language Extension",
+    "count": 6
+  },
+  {
+    "domain": "Control Structure",
+    "count": 5
+  },
+  {
+    "domain": "Requirement",
+    "count": 5
+  },
+  {
+    "domain": "Dependency",
+    "count": 4
+  },
+  {
+    "domain": "Action Definition",
+    "count": 4
+  },
+  {
+    "domain": "State",
+    "count": 4
+  },
+  {
+    "domain": "Analysis and Trade",
+    "count": 4
+  },
+  {
+    "domain": "Transition",
+    "count": 3
+  },
+  {
+    "domain": "Verification",
+    "count": 3
+  },
+  {
+    "domain": "Analysis",
+    "count": 3
+  },
+  {
+    "domain": "Package",
+    "count": 3
+  },
+  {
+    "domain": "Calculation",
+    "count": 3
+  },
+  {
+    "domain": "Individual",
+    "count": 3
+  },
+  {
+    "domain": "SequenceModeling",
+    "count": 3
+  },
+  {
+    "domain": "Variability",
+    "count": 3
+  },
+  {
+    "domain": "Variant Configuration",
+    "count": 3
+  },
+  {
+    "domain": "Flow Connection",
+    "count": 3
+  },
+  {
+    "domain": "Model Constrainment",
+    "count": 3
+  },
+  {
+    "domain": "Metadata",
+    "count": 2
+  },
+  {
+    "domain": "Filtering",
+    "count": 2
+  },
+  {
+    "domain": "Binding Connector",
+    "count": 2
+  },
+  {
+    "domain": "Message",
+    "count": 2
+  },
+  {
+    "domain": "Action",
+    "count": 2
+  },
+  {
+    "domain": "View and Viewpoint",
+    "count": 2
+  },
+  {
+    "domain": "State Definition",
+    "count": 2
+  },
+  {
+    "domain": "Conditional Succession",
+    "count": 2
+  },
+  {
+    "domain": "View",
+    "count": 2
+  },
+  {
+    "domain": "State-based Behavior",
+    "count": 2
+  },
+  {
+    "domain": "Use Case",
+    "count": 2
+  },
+  {
+    "domain": "Functional Allocation",
+    "count": 2
+  },
+  {
+    "domain": "Enumeration",
+    "count": 2
+  },
+  {
+    "domain": "Interface",
+    "count": 2
+  },
+  {
+    "domain": "Port",
+    "count": 2
+  },
+  {
+    "domain": "Generalization",
+    "count": 1
+  },
+  {
+    "domain": "Opaque Action",
+    "count": 1
+  },
+  {
+    "domain": "Individual and Snapshot",
+    "count": 1
+  },
+  {
+    "domain": "Redefinition",
+    "count": 1
+  },
+  {
+    "domain": "Connection",
+    "count": 1
+  },
+  {
+    "domain": "Item",
+    "count": 1
+  },
+  {
+    "domain": "Subsetting",
+    "count": 1
+  },
+  {
+    "domain": "Assignment Action",
+    "count": 1
+  },
+  {
+    "domain": "Attribute",
+    "count": 1
+  }
+]
