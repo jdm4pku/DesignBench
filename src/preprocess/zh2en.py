@@ -41,5 +41,19 @@ def translate_nl_requirements(root_path="dataset/sysml/samples"):
             f.write(nl_en)
         print(f"{id}需求已经翻译。")
 
+def translate_domain_label(root_path="dataset/sysml/samples"):
+    file_list = ["01","02","03","04","05","06","07","08","09","10"]
+    for id in file_list:
+    # for id in tqdm(range(11,152)):
+        data_dir = f"{root_path}/{id}"
+        domain_path = f"{data_dir}/domain.txt"
+        with open(domain_path,'r',encoding='utf-8') as f:
+            domain_zh = f.read()
+        prompt = f"{domain_zh} \n 请精确将上面的中文描述翻译成英文。"
+        domain_en = get_completion(prompt)
+        with open(domain_path,'w',encoding='utf-8') as f:
+            f.write(domain_en)
+        print(f"{id}需求已经翻译。")
+
 if __name__=="__main__":
-    translate_nl_requirements()
+    translate_domain_label()

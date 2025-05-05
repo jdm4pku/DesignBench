@@ -1,28 +1,35 @@
 import os
 import json
 
-def generate_dataset_json(root_path="dataset/sysml/samples",output_path="dataset/sysml/grammar/dataset.json"):
+def generate_dataset_json(root_path="dataset/sysml/samples",output_path="dataset/sysml/dataset.json"):
     dataset = []
     count = 0
     for dirpath, dirnames, filenames in os.walk(root_path):
-       if all(name in filenames for name in ['nl.txt', "nl_zh.txt", 'design.sysml', 'label.txt']):
+       dirnames.sort()
+       if all(name in filenames for name in ['nl.txt', "nl_zh.txt", 'design.sysml', 'grammar.txt','domain.txt']):
            nl_en_path = os.path.join(dirpath,"nl.txt")
           #  nl_zh_path = os.path.join(dirpath,"nl_zh.txt")
            design_path = os.path.join(dirpath, 'design.sysml')
-           label_path = os.path.join(dirpath, 'label.txt')
+           domain_path = os.path.join(dirpath,"domain.txt")
+           grammar_path = os.path.join(dirpath, 'grammar.txt')
+           diagram_path = os.path.join(dirpath,'design.png')
            with open(nl_en_path, 'r', encoding='utf-8') as f:
                 nl_en = f.read().strip()
           #  with open(nl_zh_path, 'r', encoding='utf-8') as f:
           #       nl_zh = f.read().strip()
            with open(design_path, 'r', encoding='utf-8') as f:
                 design_sysml = f.read().strip()
-           with open(label_path, 'r', encoding='utf-8') as f:
-                label = f.read().strip()
+           with open(domain_path,'r',encoding='utf-8') as f:
+                domain = f.read().strip()
+           with open(grammar_path, 'r', encoding='utf-8') as f:
+                grammar = f.read().strip()
            dataset.append(
                {
                    "nl":nl_en,
                    "design":design_sysml,
-                   "label":label
+                   "domain":domain,
+                   "grammar":grammar,
+                   "diagram": diagram_path
                }
            )
            count +=1
