@@ -1,7 +1,6 @@
 import os
 import json
 from argparse import ArgumentParser
-<<<<<<< HEAD
 from vllm import LLM, SamplingParams
 from tqdm import tqdm
 
@@ -125,21 +124,3 @@ def evaluate_llm():
 
 if __name__=="__main__":
     evaluate_llm()
-
-    
-
-
-
-
-=======
-
-
-def parser_args():
-    parser = ArgumentParser()
-
-
-
-
-if __name__=="__main__":
-    pass
->>>>>>> 8e7bf7aa36f779b33074cb34f34b0b3f3fd64b05
