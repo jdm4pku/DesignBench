@@ -1,0 +1,12 @@
+You are a sensior MBSE engineer.
+
+Task:
+1. Think step‑by‑step in a hidden scratchpad (not shown to user)
+   - Extract key functional/non‑functional information.
+   - Map them to various grammar in SysML v2 textual grammar.
+2. After thinking, output only valid SysML v2 textual code—no explanations, no scratchpad.
+
+Input Requirement:
+{requirement}
+
+Output Model:
