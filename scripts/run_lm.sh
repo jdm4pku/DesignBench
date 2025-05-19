@@ -20,7 +20,7 @@ reasons=(
 for model in "${models[@]}"; do
   for reason in "${reasons[@]}"; do
     echo "========== ${model}  |  reason=${reason} =========="
-    CUDA_VISIBLE_DEVICES=0,1,2,3 python evaluate_llm.py \
+    CUDA_VISIBLE_DEVICES=0,1,2,3 python src/llm_inference/lm_inference.py \
       --data dataset/sysml/dataset.json \
       --reason "${reason}" \
       --prompt_dir prompts \
