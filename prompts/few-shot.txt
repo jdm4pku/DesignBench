@@ -7,11 +7,10 @@ Return only valid SysML v2 code, no explanations or commentary.
 ––––– FEW‑SHOT EXAMPLES –––––
 
 Input Requirements:
-
+{req}
 
 Output Model:
-{example_model}
-
+{design}
 ––––– YOUR TURN –––––
 
 Input Requirement:

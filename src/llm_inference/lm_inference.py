@@ -67,7 +67,7 @@ def load_general_llms(model_name,moda,max_tokens=1024,max_model_len=4096):
     if not os.path.exists(model_dir):
         print(f"Model directory {model_dir} does not exist.")
         exit(1)
-    model = LLM(model_dir=model_dir, max_model_len=max_model_len,trust_remote_code=True,gpu_memory_utilization=0.9,tensor_parallel_size=4)
+    model = LLM(model=model_dir, max_model_len=max_model_len,trust_remote_code=True,gpu_memory_utilization=0.9,tensor_parallel_size=4)
     return model, sample_params
     # elif model_name == "DeepSeek-Coder-V2-Instruct": #vllm不支持这个模型
     #     print("Loading DeepSeek-Coder-V2-Instruct")

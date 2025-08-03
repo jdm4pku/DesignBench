@@ -1,0 +1,93 @@
+{
+    "Vehicle Traffic": {
+        "blue": 0.024783998485986156,
+        "rouge": 0.4536705323887726,
+        "bertscore": 0.6625439673662186,
+        "sysm_eval_p": 0.6602142556175972,
+        "sysm_eval_r": 0.6076685185185186
+    },
+    "Confidentiality and security": {
+        "blue": 0.024568994550673223,
+        "rouge": 0.49600999968582676,
+        "bertscore": 0.7041100263595581,
+        "sysm_eval_p": 0.6875,
+        "sysm_eval_r": 0.8571500000000001
+    },
+    "Aerospace": {
+        "blue": 0.023605355568674085,
+        "rouge": 0.38881736303829834,
+        "bertscore": 0.6629754702250162,
+        "sysm_eval_p": 0.7642857142857142,
+        "sysm_eval_r": 0.5355
+    },
+    "Systems Engineering": {
+        "blue": 0.01368194119020901,
+        "rouge": 0.4267047736464083,
+        "bertscore": 0.6084709465503693,
+        "sysm_eval_p": 0.2,
+        "sysm_eval_r": 0.34615
+    },
+    "Water resource transportation": {
+        "blue": 0.00708743115541819,
+        "rouge": 0.3985239852398524,
+        "bertscore": 0.6277921795845032,
+        "sysm_eval_p": 0.0,
+        "sysm_eval_r": 0.1429
+    },
+    "Information Management": {
+        "blue": 0.008482060296289992,
+        "rouge": 0.36616851045080234,
+        "bertscore": 0.6207323297858238,
+        "sysm_eval_p": 0.6454247835497836,
+        "sysm_eval_r": 0.47048749999999995
+    },
+    "Medical Health": {
+        "blue": 0.0024090418652346545,
+        "rouge": 0.4008892182289737,
+        "bertscore": 0.6047729849815369,
+        "sysm_eval_p": 0.0,
+        "sysm_eval_r": 0.0
+    },
+    "Simulation Calculation": {
+        "blue": 0.04573567096344698,
+        "rouge": 0.520948515284942,
+        "bertscore": 0.7046973407268524,
+        "sysm_eval_p": 0.8541666666666666,
+        "sysm_eval_r": 0.78555
+    },
+    "Energy materials": {
+        "blue": 0.016274537326871102,
+        "rouge": 0.4364076313625165,
+        "bertscore": 0.6841714382171631,
+        "sysm_eval_p": 0.7200226244343891,
+        "sysm_eval_r": 0.30693333333333334
+    },
+    "Network Communication": {
+        "blue": 0.022519865516606452,
+        "rouge": 0.4254801401818494,
+        "bertscore": 0.6375493804613749,
+        "sysm_eval_p": 0.8110177404295053,
+        "sysm_eval_r": 0.6112000000000001
+    },
+    "Photography Technique": {
+        "blue": 0.03129183254331712,
+        "rouge": 0.43237197327527244,
+        "bertscore": 0.6449768096208572,
+        "sysm_eval_p": 0.6836004273504274,
+        "sysm_eval_r": 0.6041166666666667
+    },
+    "Embedded device": {
+        "blue": 0.04051401837182588,
+        "rouge": 0.32093023255813957,
+        "bertscore": 0.7004692554473877,
+        "sysm_eval_p": 0.7142857142857143,
+        "sysm_eval_r": 0.2
+    },
+    "Fault diagnosis": {
+        "blue": 0.018516666825143826,
+        "rouge": 0.41674424435042723,
+        "bertscore": 0.6412907441457113,
+        "sysm_eval_p": 0.6628920786815523,
+        "sysm_eval_r": 0.35000000000000003
+    }
+}

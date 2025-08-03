@@ -1,0 +1,1067 @@
+[
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33966782689094543
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3275146484375
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34552013874053955
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31687653064727783
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3429770767688751
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3520815670490265
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33004990220069885
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.362366259098053
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3450202941894531
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3138197064399719
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3341312110424042
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3427356481552124
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30027514696121216
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33984166383743286
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33562615513801575
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3346041440963745
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33258986473083496
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.362660676240921
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3457528054714203
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.36034804582595825
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31987425684928894
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3539654016494751
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3442397117614746
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3556388020515442
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.35367685556411743
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30748310685157776
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.2979099154472351
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.29307809472084045
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3090396225452423
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32079777121543884
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.2980320155620575
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3367146849632263
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3368050158023834
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3303798735141754
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3162863850593567
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3203822076320648
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3336121439933777
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32179686427116394
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33587348461151123
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33650994300842285
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.314737468957901
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3428391218185425
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34735843539237976
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34991392493247986
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3313359320163727
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.36286354064941406
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3079986572265625
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3151029050350189
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3367682993412018
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3327289819717407
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.35644593834877014
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3156607449054718
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32513296604156494
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3411584794521332
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30148500204086304
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3226204216480255
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34581202268600464
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3312710225582123
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32621249556541443
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33265361189842224
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3074626922607422
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31767258048057556
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31446102261543274
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3217715919017792
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3224601745605469
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31891942024230957
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33508795499801636
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32865482568740845
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3283798396587372
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3318940997123718
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32326528429985046
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3362022936344147
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33727502822875977
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3265634775161743
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33225956559181213
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3220807909965515
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32467448711395264
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31073689460754395
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32092371582984924
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33201199769973755
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3433869779109955
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3494061827659607
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3305724859237671
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3341473639011383
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33599331974983215
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3528207838535309
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31385546922683716
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31069517135620117
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3213391900062561
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32506632804870605
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33064886927604675
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3293493092060089
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3517177104949951
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33575382828712463
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3351762890815735
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31135642528533936
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3219984471797943
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30649179220199585
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.2980334162712097
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3104338049888611
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31011056900024414
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.33038732409477234
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31938520073890686
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3078254461288452
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30514317750930786
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3134743869304657
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31260910630226135
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30482217669487
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30102384090423584
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3234401047229767
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32322224974632263
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3204747438430786
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3197992742061615
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3240604102611542
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3228229880332947
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31785815954208374
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3142847716808319
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34110134840011597
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3472466468811035
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3231988251209259
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3127334415912628
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31168657541275024
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3120082914829254
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30945709347724915
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.31190818548202515
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32808566093444824
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3178148567676544
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30576515197753906
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3418216407299042
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34790199995040894
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3394644558429718
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.336663156747818
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3503339886665344
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.30628859996795654
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3065798282623291
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3070487380027771
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3329683840274811
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3337203860282898
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3478110730648041
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34791725873947144
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.32743921875953674
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3172002136707306
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3185500204563141
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34801068902015686
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.34908705949783325
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.35322675108909607
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3498377501964569
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3477606475353241
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3473477065563202
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.35652729868888855
+    },
+    {
+        "sentence_bleu_score": 0,
+        "rouge1_f1": 0.0,
+        "rouge2_f1": 0.0,
+        "rougeL_f1": 0,
+        "bertscore": 0.3388938307762146
+    },
+    {
+        "corpus_bleu_score_avg": 0,
+        "sentence_bleu_score_avg": 0.0,
+        "rouge1_f1_avg": 0.0,
+        "rouge2_f1_avg": 0.0,
+        "rougeL_f1_avg": 0.0,
+        "bertscore_avg": 0.3285550135650382
+    }
+]

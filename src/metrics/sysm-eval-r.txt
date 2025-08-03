@@ -1,0 +1,16 @@
+Your task is to evaluate the **recall** of a generated system model. You will be given a reference system model and a generated system model. Please perform the following steps:
+
+1. List all atomic modeling claims made by the reference system model. Each atomic claim should correspond to a minimal, meaningful modeling element (e.g., the definition of a part, the declaration of an attribute, the use of types, or structural relations like containment or reference).
+2. For each atomic claim in the reference model, determine whether it is covered by the generated model (i.e., the generated model contains the same or equivalent element).
+3. Summarize the results using the format: Score: <number of covered claims>/<total number of claims in the reference model>
+
+You should ignore formatting or identifier naming differences if the structure and semantics match.
+
+Input:
+Reference Model:
+{reference_model}
+
+Generated Model:
+{generated_model}
+
+Output:

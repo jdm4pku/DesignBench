@@ -1,0 +1,16 @@
+Your task is to evaluate the precision of a generated system model. You will be given a reference system model and a generated system model. Please perform the following steps:
+
+1. List all atomic modeling claims made by the generated system model. Each atomic claim should correspond to a minimal, meaningful modeling element (e.g., the definition of a part, the declaration of an attribute, the use of types, or structural relations like containment or reference).
+2. For each atomic claim in the generated model, determine whether it is supported by the reference model (i.e., the reference model contains the same or equivalent element).
+3. Summarize the results using the format: Score: <number of supported claims>/<total number of claims in the generated model>
+
+You should ignore formatting or identifier naming differences if the structure and semantics match.
+
+Input:
+Reference Model:
+{reference_model}
+
+Generated Model:
+{generated_model}
+
+Output:
