@@ -52,6 +52,10 @@ def difficult_id():
             result["5"].append(idx)
     return result
 
+def get_distribution(result):
+    for key,value in result.items():
+        print(f"{key}:{len(value)}")
+
 def get_metrics_various_difficulty(difficult2id):
     traditional_metrics_path = "result/qwen3/direct.json"
     sysm_eval_metrics_path = "result/qwen3/sysm_eval/metrics_direct.json"
@@ -88,4 +92,5 @@ def get_metrics_various_difficulty(difficult2id):
 
 if __name__=="__main__":
     difficult2id = difficult_id()
-    get_metrics_various_difficulty(difficult2id)
+    get_distribution(difficult2id)
+    # get_metrics_various_difficulty(difficult2id)
